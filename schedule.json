@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "team": "Rookie Ridge 6U–8U",
+    "opponent": "East Stars",
+    "date": "2026-09-06",
+    "time": "9:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 2,
+    "team": "Iron Pups 10U–12U",
+    "opponent": "North Lions",
+    "date": "2026-09-07",
+    "time": "11:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 3,
+    "team": "Ridge Hawks 14U",
+    "opponent": "Central Falcons",
+    "date": "2026-09-07",
+    "time": "1:00 PM",
+    "location": "Central Field",
+    "home": false
+  },
+  {
+    "id": 4,
+    "team": "Iron Elite 16U–18U",
+    "opponent": "Westside Warriors",
+    "date": "2026-09-12",
+    "time": "10:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 5,
+    "team": "Iron Pups 10U–12U",
+    "opponent": "Valley Raiders",
+    "date": "2026-09-14",
+    "time": "10:00 AM",
+    "location": "Valley Sports Park",
+    "home": false
+  },
+  {
+    "id": 6,
+    "team": "Ridge Hawks 14U",
+    "opponent": "Valley Knights",
+    "date": "2026-09-21",
+    "time": "1:00 PM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 7,
+    "team": "Iron Elite 16U–18U",
+    "opponent": "South Thunder",
+    "date": "2026-09-19",
+    "time": "11:00 AM",
+    "location": "Thunder Park",
+    "home": false
+  },
+  {
+    "id": 8,
+    "team": "Rookie Ridge 6U–8U",
+    "opponent": "Hillside Hawks",
+    "date": "2026-09-20",
+    "time": "9:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 9,
+    "team": "Iron Elite 16U–18U",
+    "opponent": "Riverside Rams",
+    "date": "2026-09-26",
+    "time": "10:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 10,
+    "team": "Ridge Hawks 14U",
+    "opponent": "Blue Mountain Bears",
+    "date": "2026-09-28",
+    "time": "12:00 PM",
+    "location": "Bear Creek Stadium",
+    "home": false
+  },
+  {
+    "id": 11,
+    "team": "Iron Pups 10U–12U",
+    "opponent": "Clearfield Chargers",
+    "date": "2026-10-03",
+    "time": "10:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 12,
+    "team": "Iron Elite 16U–18U",
+    "opponent": "State College Storm",
+    "date": "2026-10-04",
+    "time": "1:00 PM",
+    "location": "Storm Field",
+    "home": false
+  },
+  {
+    "id": 13,
+    "team": "Ridge Hawks 14U",
+    "opponent": "Bellefonte Eagles",
+    "date": "2026-10-05",
+    "time": "11:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 14,
+    "team": "Rookie Ridge 6U–8U",
+    "opponent": "Philipsburg Panthers",
+    "date": "2026-10-10",
+    "time": "9:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  },
+  {
+    "id": 15,
+    "team": "Iron Elite 16U–18U",
+    "opponent": "Lock Haven Lightning",
+    "date": "2026-10-17",
+    "time": "11:00 AM",
+    "location": "Ironridge Stadium",
+    "home": true
+  }
+]

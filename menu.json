@@ -1,0 +1,127 @@
+{
+  "id": "gridiron-menu",
+  "title": "GridIron Youth Football League",
+  "description": "Main site navigation",
+  "items": [
+    {
+      "id": "home",
+      "title": "Home",
+      "slug": "/home",
+      "order": 0,
+      "children": []
+    },
+    {
+      "id": "about",
+      "title": "About",
+      "slug": "/about",
+      "order": 1,
+      "children": [
+        {
+          "id": "about-story",
+          "title": "Our Story",
+          "slug": "/about/story",
+          "order": 0
+        },
+        {
+          "id": "about-board",
+          "title": "Board of Directors",
+          "slug": "/about/board",
+          "order": 1
+        },
+        {
+          "id": "about-donate",
+          "title": "Donate / Sponsor",
+          "slug": "/about/donate",
+          "order": 2
+        },
+        {
+          "id": "about-faq",
+          "title": "FAQ",
+          "slug": "/about/faq",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "programs",
+      "title": "Programs",
+      "slug": "/programs",
+      "order": 2,
+      "children": [
+        {
+          "id": "programs-rookie",
+          "title": "Rookie Ridge (6U–8U)",
+          "slug": "/programs/rookie-ridge",
+          "order": 0
+        },
+        {
+          "id": "programs-pups",
+          "title": "Iron Pups (10U–12U)",
+          "slug": "/programs/iron-pups",
+          "order": 1
+        },
+        {
+          "id": "programs-hawks",
+          "title": "Ridge Hawks (14U)",
+          "slug": "/programs/ridge-hawks",
+          "order": 2
+        },
+        {
+          "id": "programs-elite",
+          "title": "Iron Elite (16U–18U)",
+          "slug": "/programs/iron-elite",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "schedule",
+      "title": "Schedule",
+      "slug": "/schedule",
+      "order": 3,
+      "children": []
+    },
+    {
+      "id": "parent-info",
+      "title": "Parents",
+      "slug": "/parent-info",
+      "order": 4,
+      "children": [
+        {
+          "id": "parents-started",
+          "title": "Getting Started",
+          "slug": "/parent-info/getting-started",
+          "order": 0
+        },
+        {
+          "id": "parents-equipment",
+          "title": "Equipment Guide",
+          "slug": "/parent-info/equipment",
+          "order": 1
+        },
+        {
+          "id": "parents-volunteer",
+          "title": "Volunteer Opportunities",
+          "slug": "/parent-info/volunteer",
+          "order": 2
+        },
+        {
+          "id": "parents-safesport",
+          "title": "SafeSport Training",
+          "slug": "/parent-info/safesport",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "register",
+      "title": "Register Now",
+      "slug": "/register",
+      "order": 5,
+      "metadata": {
+        "cta": true
+      },
+      "children": []
+    }
+  ]
+}
