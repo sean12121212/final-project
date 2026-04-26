@@ -7,12 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-sponsor-bar`
- * Horizontal row of partner/sponsor logos with links.
- * Config-driven via `sponsors` property or slot for custom content.
- *
- * Properties:
- *   sponsors {Array} - [{name, href, logo}] — logo is optional; shows text pill if absent
- *
+ * 
  * @element gridiron-sponsor-bar
  */
 export class GridironSponsorBar extends DDDSuper(LitElement) {

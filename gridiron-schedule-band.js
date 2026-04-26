@@ -7,15 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-schedule-band`
- * Loads game schedule from /api/schedule and renders upcoming games.
- * Homepage: horizontal scrolling strip of next 5 games.
- * Schedule page: full table view when `fullview` attribute set.
- *
- * Properties:
- *   fullview {Boolean}   - show full schedule table (schedule page)
- *   games {Array}        - fetched schedule data
- *   loading {Boolean}    - loading state
- *
+ * 
  * @element gridiron-schedule-band
  */
 export class GridironScheduleBand extends DDDSuper(LitElement) {
@@ -88,21 +80,25 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
       super.styles,
       css`
         :host {
+
           display: block;
           font-family: var(--ddd-font-navigation);
         }
-        /* ── Strip mode (homepage) ── */
+        /* homepage*/
         .schedule-strip {
+
           background-color: var(--ddd-theme-default-potentialMidnight);
           padding: var(--ddd-spacing-6) var(--ddd-spacing-6);
         }
         .strip-header {
+
           display: flex;
           align-items: center;
           justify-content: space-between;
           margin-bottom: var(--ddd-spacing-5);
         }
         .strip-title {
+
           font-size: var(--ddd-font-size-m);
           font-weight: var(--ddd-font-weight-bold);
           color: var(--ddd-theme-default-roarGolden);
@@ -111,6 +107,7 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           margin: 0;
         }
         .view-all-btn {
+
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-limestoneLight);
           text-transform: uppercase;
@@ -125,10 +122,12 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           transition: border-color 0.2s, color 0.2s;
         }
         .view-all-btn:hover {
+
           border-color: var(--ddd-theme-default-roarGolden);
           color: var(--ddd-theme-default-roarGolden);
         }
         .games-scroll {
+
           display: flex;
           gap: var(--ddd-spacing-4);
           overflow-x: auto;
@@ -137,6 +136,7 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           scrollbar-color: var(--ddd-theme-default-navy60) transparent;
         }
         .game-chip {
+
           flex-shrink: 0;
           background-color: var(--ddd-theme-default-navy80);
           border: 1px solid var(--ddd-theme-default-navy60);
@@ -148,11 +148,13 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           gap: var(--ddd-spacing-2);
         }
         .chip-date {
+
           display: flex;
           align-items: center;
           gap: var(--ddd-spacing-2);
         }
         .chip-day {
+
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-roarGolden);
           text-transform: uppercase;
@@ -160,16 +162,19 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           font-weight: var(--ddd-font-weight-bold);
         }
         .chip-date-num {
+
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-limestoneLight);
         }
         .chip-team {
+
           font-size: var(--ddd-font-size-xs);
           font-weight: var(--ddd-font-weight-bold);
           color: var(--ddd-theme-default-white);
           line-height: 1.2;
         }
         .chip-vs {
+          
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-slateGray);
           text-transform: uppercase;

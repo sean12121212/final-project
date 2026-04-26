@@ -17,12 +17,7 @@ import "./gridiron-footer.js";
 
 /**
  * `gridiron-app`
- * Root application shell. Handles client-side routing via History API.
- * Route: /             -> home
- * Route: /schedule     -> schedule page
- * Route: /programs     -> programs page
- * Route: /parent-info  -> parent info page
- *
+ * 
  * @demo index.html
  * @element gridiron-app
  */

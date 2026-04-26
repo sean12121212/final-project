@@ -7,14 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-program-card`
- * Card for displaying an age-group program. Used in both homepage band and programs page.
- *
- * Properties:
- *   programName {String}  - e.g. "Iron Elite"
- *   ageGroup {String}     - e.g. "16U–18U"
- *   type {String}         - e.g. "Travel"
- *   description {String}  - short program description
- *   expanded {Boolean}    - shows extra detail/register CTA when true (programs page)
+ * 
  *
  * @element gridiron-program-card
  */
@@ -52,6 +45,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           font-family: var(--ddd-font-navigation);
         }
         .card {
+
           background-color: var(--ddd-theme-default-white);
           border: 1px solid var(--ddd-theme-default-limestoneGray);
           border-radius: var(--ddd-radius-md);
@@ -62,15 +56,18 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           flex-direction: column;
         }
         .card:hover {
+
           transform: translateY(-3px);
           box-shadow: var(--ddd-boxShadow-md);
         }
         .card-header {
+
           background-color: var(--ddd-theme-default-nittanyNavy);
           padding: var(--ddd-spacing-5) var(--ddd-spacing-5) var(--ddd-spacing-4);
           position: relative;
         }
         .age-badge {
+
           display: inline-block;
           background-color: var(--ddd-theme-default-roarGolden);
           color: var(--ddd-theme-default-nittanyNavy);
@@ -83,6 +80,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           margin-bottom: var(--ddd-spacing-2);
         }
         .program-name {
+
           font-size: var(--ddd-font-size-l);
           font-weight: var(--ddd-font-weight-bold);
           color: var(--ddd-theme-default-white);
@@ -91,6 +89,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           letter-spacing: 1px;
         }
         .type-tag {
+
           display: inline-block;
           margin-top: var(--ddd-spacing-2);
           font-size: var(--ddd-font-size-3xs);
@@ -101,6 +100,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           padding-left: var(--ddd-spacing-2);
         }
         .card-body {
+
           padding: var(--ddd-spacing-5);
           flex: 1;
           display: flex;
@@ -108,6 +108,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           gap: var(--ddd-spacing-4);
         }
         .description {
+
           font-size: var(--ddd-font-size-s);
           color: var(--ddd-theme-default-coalyGray);
           line-height: 1.6;
@@ -115,6 +116,7 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           flex: 1;
         }
         .register-btn {
+
           display: block;
           width: 100%;
           background-color: var(--ddd-theme-default-roarGolden);
@@ -133,9 +135,11 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           transition: background-color 0.2s;
         }
         .register-btn:hover {
+
           background-color: var(--ddd-theme-default-keystoneYellow);
         }
         .learn-more {
+
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-beaverBlue);
           text-transform: uppercase;
@@ -149,10 +153,12 @@ export class GridironProgramCard extends DDDSuper(LitElement) {
           text-align: left;
         }
         .learn-more:hover {
+          
           color: var(--ddd-theme-default-nittanyNavy);
         }
         /* Slot for additional content on programs page */
         ::slotted(*) {
+          
           margin-top: var(--ddd-spacing-3);
         }
       `,

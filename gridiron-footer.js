@@ -7,8 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-footer`
- * Site-wide footer. About blurb, nav links, contact, legal.
- * Dark background with gold accent.
+ * 
  *
  * @element gridiron-footer
  */

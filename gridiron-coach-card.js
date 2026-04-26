@@ -7,15 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-coach-card`
- * Coach profile card. Photo (or initials avatar), name, role, bio snippet.
- * Used on homepage coaches band and About page.
- *
- * Properties:
- *   name {String}    - coach full name
- *   role {String}    - title/role e.g. "Head Coach — Ridge Hawks 14U"
- *   bio {String}     - short biography
- *   photo {String}   - URL to photo (optional; shows initials avatar if absent)
- *
+ * 
  * @element gridiron-coach-card
  */
 export class GridironCoachCard extends DDDSuper(LitElement) {

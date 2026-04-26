@@ -7,15 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-stats-counter`
- * Animated number counter with label. Used in the stats band on the homepage.
- * Animates from 0 to `count` when element enters the viewport.
- *
- * Properties:
- *   count {Number}   - target number to count to
- *   label {String}   - label below the number (e.g. "Youth Athletes")
- *   prefix {String}  - optional prefix like "$"
- *   suffix {String}  - optional suffix like "+"
- *
+ * 
  * @element gridiron-stats-counter
  */
 export class GridironStatsCounter extends DDDSuper(LitElement) {

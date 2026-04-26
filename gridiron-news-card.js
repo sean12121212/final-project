@@ -7,14 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-news-card`
- * News article preview card. Date, headline, excerpt, read-more link.
- *
- * Properties:
- *   headline {String}  - article headline
- *   date {String}      - ISO date string e.g. "2026-09-14"
- *   excerpt {String}   - short preview text
- *   href {String}      - link to full article (defaults to "#")
- *
+ * 
  * @element gridiron-news-card
  */
 export class GridironNewsCard extends DDDSuper(LitElement) {

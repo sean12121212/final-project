@@ -7,11 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-hero`
- * Full-width hero band. Homepage hero section with headline, tagline, and CTA buttons.
- *
- * Properties:
- *   headline {String}  - main hero heading
- *   tagline {String}   - supporting subtext
+ * 
  *
  * @element gridiron-hero
  */

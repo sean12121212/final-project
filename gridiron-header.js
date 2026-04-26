@@ -7,15 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-header`
- * Top navigation bar. Loads menu from lib/menu.json via import.meta.url
- * (JSON Outline Schema). Handles mobile hamburger toggle.
- * Fires gridiron-navigate events for routing.
- *
- * Properties:
- *   currentPage {String} - active page slug, used to highlight nav link
- *   menuOpen {Boolean}   - mobile hamburger state
- *   menuItems {Array}    - nav items loaded from menu.json
- *
+ * 
  * @element gridiron-header
  */
 export class GridironHeader extends DDDSuper(LitElement) {
@@ -50,7 +42,7 @@ export class GridironHeader extends DDDSuper(LitElement) {
         this.menuItems = data.items || [];
       }
     } catch {
-      // Falls back to hardcoded nav links rendered below
+      // Falls back to hardcoded nav links 
     }
   }
 
