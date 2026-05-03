@@ -7,7 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-hero`
- * 
+ *
  * @element gridiron-hero
  */
 export class GridironHero extends DDDSuper(LitElement) {
@@ -27,6 +27,11 @@ export class GridironHero extends DDDSuper(LitElement) {
       headline: { type: String },
       tagline: { type: String },
     };
+  }
+
+  // Resolve logo path correctly after Rollup build on Vercel
+  get _logoUrl() {
+    return new URL("./logo.png", import.meta.url).href;
   }
 
   _navigate(path) {
@@ -53,7 +58,7 @@ export class GridironHero extends DDDSuper(LitElement) {
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          padding: var(--ddd-spacing-12) var(--ddd-spacing-6);
+          padding: var(--ddd-spacing-12) var(--ddd-spacing-6) var(--ddd-spacing-12);
         }
         /* Decorative diagonal stripe overlay */
         .hero::before {
@@ -131,30 +136,32 @@ export class GridironHero extends DDDSuper(LitElement) {
           flex-wrap: wrap;
           gap: var(--ddd-spacing-4);
           justify-content: center;
+          margin-bottom: var(--ddd-spacing-10);
         }
         .btn-primary {
-          background-color: var(--ddd-theme-default-roarGolden);
-          color: var(--ddd-theme-default-nittanyNavy);
+          background-color: var(--ddd-theme-default-roarGolden) !important;
+          color: #1a2744 !important;
           font-size: var(--ddd-font-size-s);
           font-weight: var(--ddd-font-weight-bold);
           text-transform: uppercase;
           letter-spacing: 1px;
           padding: var(--ddd-spacing-4) var(--ddd-spacing-8);
-          border: none;
+          border: 2px solid var(--ddd-theme-default-roarGolden);
           border-radius: var(--ddd-radius-sm);
           cursor: pointer;
           font-family: var(--ddd-font-navigation);
           transition: background-color 0.2s, transform 0.1s;
-          text-decoration: none;
+          text-decoration: none !important;
           display: inline-block;
         }
         .btn-primary:hover {
-          background-color: var(--ddd-theme-default-keystoneYellow);
+          background-color: var(--ddd-theme-default-keystoneYellow) !important;
+          color: #1a2744 !important;
           transform: translateY(-1px);
         }
         .btn-secondary {
           background-color: transparent;
-          color: var(--ddd-theme-default-white);
+          color: var(--ddd-theme-default-white) !important;
           font-size: var(--ddd-font-size-s);
           font-weight: var(--ddd-font-weight-bold);
           text-transform: uppercase;
@@ -168,24 +175,20 @@ export class GridironHero extends DDDSuper(LitElement) {
         }
         .btn-secondary:hover {
           border-color: var(--ddd-theme-default-roarGolden);
-          color: var(--ddd-theme-default-roarGolden);
+          color: var(--ddd-theme-default-roarGolden) !important;
           transform: translateY(-1px);
         }
-        /* Scroll hint */
+        /* Scroll hint — sits below cta-row, not overlapping */
         .scroll-hint {
-          position: absolute;
-          bottom: var(--ddd-spacing-5);
-          left: 50%;
-          transform: translateX(-50%);
-          color: var(--ddd-theme-default-limestoneLight);
-          font-size: var(--ddd-font-size-3xs);
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          opacity: 0.6;
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: var(--ddd-spacing-1);
+          color: var(--ddd-theme-default-limestoneLight);
+          font-size: var(--ddd-font-size-3xs);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          opacity: 0.5;
         }
         .scroll-hint::after {
           content: "";
@@ -214,7 +217,7 @@ export class GridironHero extends DDDSuper(LitElement) {
       <div class="hero">
         <div class="hero-inner">
           <span class="eyebrow">GridIron Youth Football League · Est. 2026</span>
-          <img class="logo" src="./logo.png" alt="GridIron YFBL Logo" />
+          <img class="logo" src="${this._logoUrl}" alt="GridIron YFBL Logo" />
           <h1>${this.headline.split(" ").map((word, i) =>
             i === 1 ? html`<em>${word}</em> ` : html`${word} `
           )}</h1>
@@ -225,8 +228,8 @@ export class GridironHero extends DDDSuper(LitElement) {
               View Programs
             </button>
           </div>
+          <div class="scroll-hint">Scroll</div>
         </div>
-        <div class="scroll-hint">Scroll</div>
       </div>
     `;
   }

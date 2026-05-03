@@ -46,6 +46,11 @@ export class GridironHeader extends DDDSuper(LitElement) {
     }
   }
 
+  // Resolve logo path correctly after Rollup build on Vercel
+  get _logoUrl() {
+    return new URL("./logo.png", import.meta.url).href;
+  }
+
   _navigate(path) {
     this.menuOpen = false;
     this.openDropdown = "";
@@ -336,7 +341,7 @@ export class GridironHeader extends DDDSuper(LitElement) {
       <div class="top-bar"></div>
       <nav>
         <button class="logo-area" @click="${() => this._navigate("/home")}">
-          <img src="./logo.png" alt="GridIron Youth Football League logo" />
+          <img src="${this._logoUrl}" alt="GridIron Youth Football League logo" />
           <div class="brand-text">
             <span class="brand-name">GridIron</span>
             <span class="brand-sub">Youth Football League</span>

@@ -15,6 +15,11 @@ export class GridironFooter extends DDDSuper(LitElement) {
     return "gridiron-footer";
   }
 
+  // Resolve logo path correctly after Rollup build on Vercel
+  get _logoUrl() {
+    return new URL("./logo.png", import.meta.url).href;
+  }
+
   _navigate(path) {
     window.dispatchEvent(new CustomEvent("gridiron-navigate", {
       detail: { path },
@@ -157,7 +162,7 @@ export class GridironFooter extends DDDSuper(LitElement) {
       <footer>
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="./logo.png" alt="GridIron YFBL" />
+            <img src="${this._logoUrl}" alt="GridIron YFBL" />
             <p class="brand-name">GridIron Youth Football League</p>
             <p class="brand-desc">
               Building tomorrow's athletes today. Developing character, discipline, and champions
