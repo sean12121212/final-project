@@ -8,7 +8,6 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 /**
  * `gridiron-hero`
  * 
- *
  * @element gridiron-hero
  */
 export class GridironHero extends DDDSuper(LitElement) {

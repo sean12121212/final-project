@@ -17,7 +17,7 @@ import "./gridiron-footer.js";
 
 /**
  * `gridiron-app`
- * 
+ *
  * @demo index.html
  * @element gridiron-app
  */
@@ -138,6 +138,13 @@ export class GridironApp extends DDDSuper(LitElement) {
           margin: 0 0 var(--ddd-spacing-3) 0;
           text-transform: uppercase;
           letter-spacing: 1px;
+        }
+        @media (prefers-color-scheme: dark) {
+          :host { background-color: var(--ddd-theme-default-potentialMidnight); }
+          .band-title { color: var(--ddd-theme-default-roarGolden); }
+          .info-block { background-color: var(--ddd-theme-default-navy80); border-color: var(--ddd-theme-default-roarGolden); }
+          .info-block h3 { color: var(--ddd-theme-default-roarGolden); }
+          .info-block p { color: var(--ddd-theme-default-limestoneLight); }
         }
         .info-block p {
           font-size: var(--ddd-font-size-s);

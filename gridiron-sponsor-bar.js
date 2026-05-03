@@ -97,6 +97,10 @@ export class GridironSponsorBar extends DDDSuper(LitElement) {
           letter-spacing: 1px;
           white-space: nowrap;
         }
+        @media (prefers-color-scheme: dark) {
+          .sponsor-section { background-color: var(--ddd-theme-default-navy80); border-color: var(--ddd-theme-default-navy60); }
+          .sponsor-pill { background-color: var(--ddd-theme-default-potentialMidnight); border-color: var(--ddd-theme-default-navy60); color: var(--ddd-theme-default-limestoneLight); }
+        }
         /* Slot for custom sponsor logos via HTML */
         ::slotted(*) {
           display: flex;

@@ -7,7 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-coach-card`
- * 
+ *
  * @element gridiron-coach-card
  */
 export class GridironCoachCard extends DDDSuper(LitElement) {
@@ -115,6 +115,10 @@ export class GridironCoachCard extends DDDSuper(LitElement) {
           color: var(--ddd-theme-default-coalyGray);
           line-height: 1.6;
           margin: 0;
+        }
+        @media (prefers-color-scheme: dark) {
+          .card { background-color: var(--ddd-theme-default-navy80); border-color: var(--ddd-theme-default-navy60); }
+          .bio { color: var(--ddd-theme-default-limestoneLight); }
         }
         /* Slot for extra content, social links, etc. */
         ::slotted(*) {

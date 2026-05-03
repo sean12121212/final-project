@@ -7,7 +7,6 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-footer`
- * 
  *
  * @element gridiron-footer
  */

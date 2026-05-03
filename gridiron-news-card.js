@@ -110,6 +110,12 @@ export class GridironNewsCard extends DDDSuper(LitElement) {
         .read-more:hover {
           color: var(--ddd-theme-default-nittanyNavy);
         }
+        @media (prefers-color-scheme: dark) {
+          .card { background-color: var(--ddd-theme-default-navy80); border-color: var(--ddd-theme-default-navy60); }
+          .headline { color: var(--ddd-theme-default-roarGolden); }
+          .excerpt { color: var(--ddd-theme-default-limestoneLight); }
+          .date { color: var(--ddd-theme-default-limestoneGray); }
+        }
         /* Slot for image above card body */
         ::slotted(img) {
           width: 100%;

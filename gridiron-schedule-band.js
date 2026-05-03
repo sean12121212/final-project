@@ -38,9 +38,7 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
 
   async _fetchSchedule() {
     try {
-      // import.meta.url resolves correctly after Rollup build on Vercel
-      const url = new URL("./schedule.json", import.meta.url).href;
-      const res = await fetch(url);
+      const res = await fetch("/schedule.json");
       if (res.ok) {
         this.games = await res.json();
       } else {
@@ -55,13 +53,21 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
 
   _fallbackData() {
     return [
-      { id: 1, team: "Iron Elite 16U", opponent: "Westside Warriors", date: "2026-09-12", time: "10:00 AM", location: "Ironridge Stadium", home: true },
-      { id: 2, team: "Ridge Hawks 14U", opponent: "Central Falcons", date: "2026-09-13", time: "12:00 PM", location: "Central Field", home: false },
-      { id: 3, team: "Iron Pups 10U", opponent: "North Lions", date: "2026-09-14", time: "9:00 AM", location: "Ironridge Stadium", home: true },
-      { id: 4, team: "Iron Elite 16U", opponent: "South Thunder", date: "2026-09-19", time: "11:00 AM", location: "Thunder Park", home: false },
-      { id: 5, team: "Rookie Ridge 8U", opponent: "East Stars", date: "2026-09-20", time: "9:00 AM", location: "Ironridge Stadium", home: true },
-      { id: 6, team: "Ridge Hawks 14U", opponent: "Valley Knights", date: "2026-09-21", time: "1:00 PM", location: "Ironridge Stadium", home: true },
-      { id: 7, team: "Iron Elite 16U", opponent: "Riverside Rams", date: "2026-09-26", time: "10:00 AM", location: "Ironridge Stadium", home: true },
+      { id: 1,  team: "Rookie Ridge 6U–8U",  opponent: "East Stars",          date: "2026-09-06", time: "9:00 AM",  location: "Ironridge Stadium",  home: true  },
+      { id: 2,  team: "Iron Pups 10U–12U",   opponent: "North Lions",          date: "2026-09-07", time: "11:00 AM", location: "Ironridge Stadium",  home: true  },
+      { id: 3,  team: "Ridge Hawks 14U",     opponent: "Central Falcons",      date: "2026-09-07", time: "1:00 PM",  location: "Central Field",      home: false },
+      { id: 4,  team: "Iron Elite 16U–18U",  opponent: "Westside Warriors",    date: "2026-09-12", time: "10:00 AM", location: "Ironridge Stadium",  home: true  },
+      { id: 5,  team: "Iron Pups 10U–12U",   opponent: "Valley Raiders",       date: "2026-09-14", time: "10:00 AM", location: "Valley Sports Park", home: false },
+      { id: 6,  team: "Ridge Hawks 14U",     opponent: "Valley Knights",       date: "2026-09-21", time: "1:00 PM",  location: "Ironridge Stadium",  home: true  },
+      { id: 7,  team: "Iron Elite 16U–18U",  opponent: "South Thunder",        date: "2026-09-19", time: "11:00 AM", location: "Thunder Park",        home: false },
+      { id: 8,  team: "Rookie Ridge 6U–8U",  opponent: "Hillside Hawks",       date: "2026-09-20", time: "9:00 AM",  location: "Ironridge Stadium",  home: true  },
+      { id: 9,  team: "Iron Elite 16U–18U",  opponent: "Riverside Rams",       date: "2026-09-26", time: "10:00 AM", location: "Ironridge Stadium",  home: true  },
+      { id: 10, team: "Ridge Hawks 14U",     opponent: "Blue Mountain Bears",  date: "2026-09-28", time: "12:00 PM", location: "Bear Creek Stadium", home: false },
+      { id: 11, team: "Iron Pups 10U–12U",   opponent: "Clearfield Chargers",  date: "2026-10-03", time: "10:00 AM", location: "Ironridge Stadium",  home: true  },
+      { id: 12, team: "Iron Elite 16U–18U",  opponent: "State College Storm",  date: "2026-10-04", time: "1:00 PM",  location: "Storm Field",         home: false },
+      { id: 13, team: "Ridge Hawks 14U",     opponent: "Bellefonte Eagles",    date: "2026-10-05", time: "11:00 AM", location: "Ironridge Stadium",  home: true  },
+      { id: 14, team: "Rookie Ridge 6U–8U",  opponent: "Philipsburg Panthers", date: "2026-10-10", time: "9:00 AM",  location: "Ironridge Stadium",  home: true  },
+      { id: 15, team: "Iron Elite 16U–18U",  opponent: "Lock Haven Lightning", date: "2026-10-17", time: "11:00 AM", location: "Ironridge Stadium",  home: true  },
     ];
   }
 
@@ -80,25 +86,21 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
       super.styles,
       css`
         :host {
-
           display: block;
           font-family: var(--ddd-font-navigation);
         }
-        /* homepage*/
+        /* Strip mode */
         .schedule-strip {
-
           background-color: var(--ddd-theme-default-potentialMidnight);
-          padding: var(--ddd-spacing-6) var(--ddd-spacing-6);
+          padding: var(--ddd-spacing-6);
         }
         .strip-header {
-
           display: flex;
           align-items: center;
           justify-content: space-between;
           margin-bottom: var(--ddd-spacing-5);
         }
         .strip-title {
-
           font-size: var(--ddd-font-size-m);
           font-weight: var(--ddd-font-weight-bold);
           color: var(--ddd-theme-default-roarGolden);
@@ -107,7 +109,6 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           margin: 0;
         }
         .view-all-btn {
-
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-limestoneLight);
           text-transform: uppercase;
@@ -122,12 +123,10 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           transition: border-color 0.2s, color 0.2s;
         }
         .view-all-btn:hover {
-
           border-color: var(--ddd-theme-default-roarGolden);
           color: var(--ddd-theme-default-roarGolden);
         }
         .games-scroll {
-
           display: flex;
           gap: var(--ddd-spacing-4);
           overflow-x: auto;
@@ -136,7 +135,6 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           scrollbar-color: var(--ddd-theme-default-navy60) transparent;
         }
         .game-chip {
-
           flex-shrink: 0;
           background-color: var(--ddd-theme-default-navy80);
           border: 1px solid var(--ddd-theme-default-navy60);
@@ -146,15 +144,17 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           display: flex;
           flex-direction: column;
           gap: var(--ddd-spacing-2);
+          transition: border-color 0.2s;
+        }
+        .game-chip:hover {
+          border-color: var(--ddd-theme-default-roarGolden);
         }
         .chip-date {
-
           display: flex;
           align-items: center;
           gap: var(--ddd-spacing-2);
         }
         .chip-day {
-
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-roarGolden);
           text-transform: uppercase;
@@ -162,19 +162,16 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           font-weight: var(--ddd-font-weight-bold);
         }
         .chip-date-num {
-
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-limestoneLight);
         }
         .chip-team {
-
           font-size: var(--ddd-font-size-xs);
           font-weight: var(--ddd-font-weight-bold);
           color: var(--ddd-theme-default-white);
           line-height: 1.2;
         }
         .chip-vs {
-          
           font-size: var(--ddd-font-size-3xs);
           color: var(--ddd-theme-default-slateGray);
           text-transform: uppercase;
@@ -208,7 +205,7 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           border-radius: var(--ddd-radius-sm);
           margin-top: var(--ddd-spacing-1);
         }
-        /* ── Full table mode (schedule page) ── */
+        /* Full table mode */
         .schedule-table-wrap {
           max-width: 1100px;
           margin: 0 auto;
@@ -249,6 +246,12 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
           text-align: center;
           padding: var(--ddd-spacing-8);
           font-size: var(--ddd-font-size-s);
+        }
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+          tbody tr:nth-child(even) { background-color: var(--ddd-theme-default-navy80); }
+          tbody td { color: var(--ddd-theme-default-limestoneLight); border-color: var(--ddd-theme-default-navy60); }
+          .td-team { color: var(--ddd-theme-default-roarGolden); }
         }
       `,
     ];
@@ -317,11 +320,7 @@ export class GridironScheduleBand extends DDDSuper(LitElement) {
                     <td class="td-team">${g.team}</td>
                     <td>${g.opponent}</td>
                     <td>${g.location}</td>
-                    <td>
-                      <span class="${g.home ? "home-badge" : "away-badge"}">
-                        ${g.home ? "Home" : "Away"}
-                      </span>
-                    </td>
+                    <td><span class="${g.home ? "home-badge" : "away-badge"}">${g.home ? "Home" : "Away"}</span></td>
                   </tr>
                 `)}
               </tbody>

@@ -7,7 +7,7 @@ import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `gridiron-stats-counter`
- * 
+ *
  * @element gridiron-stats-counter
  */
 export class GridironStatsCounter extends DDDSuper(LitElement) {

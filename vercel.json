@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/api/schedule", "destination": "/schedule.json" },
+    { "source": "/api/menu",     "destination": "/menu.json"     },
+    { "source": "/((?!api/).*)", "destination": "/index.html"    }
+  ]
+}
